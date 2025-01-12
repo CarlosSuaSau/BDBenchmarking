@@ -6,7 +6,7 @@ ULPGC
 
 ## Summary
 
-This code shows the implementation of matrix multiplication as a distributed architecture. The idea is to divide the task between different nodes locally using map reduce to improve the performance.
+This code shows the implementation of matrix multiplication as a distributed architecture. The idea is to divide the task between different nodes locally to improve the performance.
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Two matrices of the fixed size are randomly created.
 The rows of matrix A and the columns of matrix B are converted into Spark partitions depending on the number of nodes.
 All combinations of rows and columns are distributed between nodes. Each pair of row-column is calculated with np.dot().
 Once all dot products are calculated, they are combined back to master.
-The resulting matrix is printed.
+The resulting matrix size is printed to verify the result.
 
 ## Setup and execution
 
